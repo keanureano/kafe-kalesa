@@ -38,7 +38,7 @@ export default function MenuSection() {
             )}
             key={index}
           >
-            <div className="-rotate-3 md:w-1/3">
+            <div className="-rotate-3 md:w-96">
               <Image
                 src={item.image}
                 alt={item.title}

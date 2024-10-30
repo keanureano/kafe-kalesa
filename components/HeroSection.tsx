@@ -17,14 +17,14 @@ export default function HeroSection() {
 
 function HeroContent() {
   return (
-    <div className="md:w-1/2">
-      <H1 className="text-balance">Where Every Brew, Feels Like Home</H1>
+    <div className="md:w-1/3">
+      <H1 className="pb-4 text-balance">Where Every Brew Feels Like Home</H1>
       <P>
         Welcome to Kafe Kalesa, where every brew feels like home. Our expertly
         crafted coffee and cozy atmosphere invite you to relax, unwind, and make
         every moment a little brighter.
       </P>
-      <div className="flex gap-2 pt-4 pb-8">
+      <div className="flex gap-2 pt-8 pb-8 md:pb-16">
         <Button>
           Order Now
           <ArrowRight />
