@@ -9,7 +9,7 @@ import { H1, H2, P } from "./ui/typography";
 
 const testimonialItems = [
   {
-    name: "Keanu Reano",
+    name: "Keanu Reaño",
     initials: "KR",
     rating: 9,
     message:

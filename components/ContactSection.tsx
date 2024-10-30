@@ -1,36 +1,68 @@
-import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { Container } from "./ui/container";
-import { twMerge } from "tailwind-merge";
-import { H4, P } from "./ui/typography";
+import { H3, P } from "./ui/typography";
+import Map from "./ui/map";
+import clsx from "clsx";
 
 export default function ContactSection() {
   return (
     <Container className="bg-primary-foreground text-accent">
       <Carousel
-        className="w-full select-none md:cursor-move"
+        className="w-full md:select-none md:cursor-move"
         opts={{ loop: true }}
       >
-        <CarouselContent className="inline md:flex">
+        <CarouselContent className="flex flex-col md:flex-row">
           <CarouselItems />
-          <CarouselItems className="hidden md:inline" />
+          <CarouselItems mobileHidden />
         </CarouselContent>
       </Carousel>
+      <div className="flex justify-center">
+        <p>
+          © {new Date().getFullYear().toString()} Keanu Reaño. All rights
+          reserved.
+        </p>
+      </div>
     </Container>
   );
 }
 
-function CarouselItems({ className }: { className?: string }) {
+function CarouselItems({ mobileHidden }: { mobileHidden?: boolean }) {
   return (
     <>
-      <CarouselItem className={twMerge("basis-1/3", className)}>
-        <P>Enjoy the warm atmosphere at Kafe Kalesa.</P>
+      <CarouselItem
+        className={clsx(
+          "basis-1/3 p-8 md:p-16",
+          mobileHidden && "hidden md:inline"
+        )}
+      >
+        <H3>Contact Us</H3>
+        <P>kafekalesa@example.com</P>
+        <P>0800 123 4567</P>
+        <P>+639 123 456789</P>
+        <P>123 Fake Street, Batangas, PH</P>
       </CarouselItem>
-      <CarouselItem className={twMerge("basis-1/3", className)}>
-        <H4>Contact Us</H4>
+      <CarouselItem
+        className={clsx(
+          "basis-1/3 p-8 md:p-16",
+          mobileHidden && "hidden md:inline"
+        )}
+      >
+        <H3>Follow Us</H3>
+        <P className="hover:underline cursor-pointer">
+          facebook.com/kafekalesa
+        </P>
+        <P className="hover:underline cursor-pointer">
+          instagram.com/kafekalesa
+        </P>
+        <P className="hover:underline cursor-pointer">twitter.com/kafekalesa</P>
       </CarouselItem>
-      <CarouselItem className={twMerge("basis-1/3", className)}>
-        <H4>Follow Us</H4>
+      <CarouselItem
+        className={clsx(
+          "basis-1/3 p-8 md:p-16",
+          mobileHidden && "hidden md:inline"
+        )}
+      >
+        <Map />
       </CarouselItem>
     </>
   );
