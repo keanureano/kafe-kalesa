@@ -23,7 +23,7 @@ const H2: React.FC<Props> = ({ className, children }) => {
   return (
     <h2
       className={twMerge(
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        "scroll-m-20 pb-2 text-3xl font-bold tracking-tight first:mt-0",
         className
       )}
     >
@@ -60,7 +60,7 @@ const H4: React.FC<Props> = ({ className, children }) => {
 
 const P: React.FC<Props> = ({ className, children }) => {
   return (
-    <p className={twMerge("leading-7 [&:not(:first-child)]:mt-6", className)}>
+    <p className={twMerge("leading-7 [&:not(:first-child)]:mt-4", className)}>
       {children}
     </p>
   );

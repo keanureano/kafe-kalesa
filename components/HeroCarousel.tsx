@@ -11,9 +11,8 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
+const heroItems = [hero1, hero2, hero3];
 export default function HeroCarousel() {
-  const images = [hero1, hero2, hero3];
   return (
     <Carousel
       plugins={[
@@ -24,21 +23,21 @@ export default function HeroCarousel() {
       opts={{
         loop: true,
       }}
-      className="h-72 md:h-auto md:w-1/3"
+      className="p-4 md:p-0 md:h-auto md:w-1/3"
     >
       <CarouselContent>
-        {images.map((image, index) => (
+        {heroItems.map((image, index) => (
           <CarouselItem key={index}>
             <Image
               src={image}
               alt={`Hero ${index + 1}`}
-              className="object-cover h-full"
+              className="object-cover h-full aspect-square md:aspect-auto"
             />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="stroke-secondary bg-primary-foreground border-secondary" />
-      <CarouselNext className="stroke-secondary bg-primary-foreground border-secondary" />
+      <CarouselPrevious className="hidden stroke-secondary bg-primary-foreground border-secondary md:flex" />
+      <CarouselNext className="hidden stroke-secondary bg-primary-foreground border-secondary md:flex" />
     </Carousel>
   );
 }

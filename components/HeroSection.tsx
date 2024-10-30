@@ -6,8 +6,8 @@ import HeroCarousel from "./HeroCarousel";
 
 export default function HeroSection() {
   return (
-    <Container className="px-4 py-10 bg-primary-foreground text-secondary">
-      <div className="flex flex-col items-center gap-10 md:justify-center md:flex-row-reverse">
+    <Container className="bg-primary-foreground text-secondary">
+      <div className="flex flex-col items-center gap-10 md:justify-center md:flex-row-reverse md:py-24">
         <HeroCarousel />
         <HeroContent />
       </div>
@@ -36,7 +36,7 @@ function HeroContent() {
           Learn More
         </Button>
       </div>
-      <div className="flex gap-4 text-center">
+      <div className="flex gap-4 pb-4 text-center md:pb-0">
         <div>
           <H3>10+</H3>
           <H4 className="text-sm">Coffee Varieties</H4>
