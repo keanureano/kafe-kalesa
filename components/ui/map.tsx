@@ -13,7 +13,7 @@ export default function Map() {
     <MapContainer
       preferCanvas={true}
       center={[13.7565, 121.0583]}
-      zoom={11}
+      zoom={15}
       scrollWheelZoom={true}
       className="w-full h-auto aspect-video sepia brightness-75"
     >

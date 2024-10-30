@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda } from "next/font/google";
 import "./globals.css";
+import NavigationBar from "@/components/NavigationBar";
 
 export const metadata: Metadata = {
   title: "Kafe Kalesa",
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased`}>{children}</body>
+      <body className={`${font.className} antialiased`}>
+        <NavigationBar />
+        {children}
+      </body>
     </html>
   );
 }
