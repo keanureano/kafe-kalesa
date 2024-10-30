@@ -1,7 +1,7 @@
+import dynamic from "next/dynamic";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { Container } from "./ui/container";
 import { H3, P } from "./ui/typography";
-import Map from "./ui/map";
 import clsx from "clsx";
 
 export default function ContactSection() {
@@ -16,7 +16,7 @@ export default function ContactSection() {
           <CarouselItems mobileHidden />
         </CarouselContent>
       </Carousel>
-      <div className="flex justify-center">
+      <div className="flex justify-center pt-8">
         <p>
           © {new Date().getFullYear().toString()} Keanu Reaño. All rights
           reserved.
@@ -27,6 +27,7 @@ export default function ContactSection() {
 }
 
 function CarouselItems({ mobileHidden }: { mobileHidden?: boolean }) {
+  const Map = dynamic(() => import("@/components/ui/map"), { ssr: false });
   return (
     <>
       <CarouselItem

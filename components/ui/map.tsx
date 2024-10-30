@@ -15,7 +15,7 @@ export default function Map() {
       center={[13.7565, 121.0583]}
       zoom={11}
       scrollWheelZoom={true}
-      className="w-full h-auto aspect-video"
+      className="w-full h-auto aspect-video sepia brightness-75"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
