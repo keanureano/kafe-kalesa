@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { Container } from "./ui/container";
-import { H1, H2, H3, P } from "./ui/typography";
+import { H1, H2, P } from "./ui/typography";
 
 const testimonialItems = [
   {
@@ -44,7 +44,11 @@ export default function TestimonialSection() {
           className="text-center md:w-1/2 min-w-96"
         >
           {testimonialItems.map((item, index) => (
-            <AccordionItem value={`item-${index + 1}`} key={index}>
+            <AccordionItem
+              value={`item-${index + 1}`}
+              key={index}
+              className="border-none"
+            >
               <AccordionTrigger className="flex justify-center w-full gap-8">
                 <div>
                   <H2>{item.name}</H2>

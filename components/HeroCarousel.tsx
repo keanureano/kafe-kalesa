@@ -23,7 +23,7 @@ export default function HeroCarousel() {
       opts={{
         loop: true,
       }}
-      className="p-4 md:p-0 md:h-auto md:w-96"
+      className="p-4 cursor-move md:p-0 md:h-auto md:w-96"
     >
       <CarouselContent>
         {heroItems.map((image, index) => (

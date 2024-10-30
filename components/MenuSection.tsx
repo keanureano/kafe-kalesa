@@ -26,10 +26,10 @@ const menuItems = [
 export default function MenuSection() {
   return (
     <Container className="bg-primary">
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-16">
         <H1>Our Best Sellers</H1>
       </div>
-      <div className="flex flex-col gap-16 pt-8 md:items-center">
+      <div className="flex flex-col gap-16 md:items-center">
         {menuItems.map((item, index) => (
           <div
             className={clsx(
